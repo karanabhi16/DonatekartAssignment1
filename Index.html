@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 1</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .price_dollar{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header text-white" style="background: black;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <h3>DonateKart Project </h3>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
+                        </div>
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_bag_alt"></span> 
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Assignment 1</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Shop Section Begin -->
+    <section class="shop spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" >
+                    <select name="change_price" id="change_price" onchange="changePrice(this.value)" style="float: right;margin-bottom: 5px;">
+                        <option value="INR">INR</option>
+                        <option value="USD">USD</option>
+                      </select>
+                </div>      
+
+                <div class="col-lg-11 col-md-11">
+                    <div class="row" id="product_listing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Section End -->
+<hr>
+<!-- Footer Section Begin -->
+<footer class="footer text-white" style="background: black;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <h3>DonateKart Project</h3>
+                    </div>
+                    <p>Donatekart Project of a single page application to show products and cost in the chosen currency.</p>
+                    <div class="footer__payment">
+                        <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-5">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services__item">
+                    <i class="fa fa-support"></i>
+                    <h6 class="text-white">Online Support 24/7</h6>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="services__item">
+                    <i class="fa fa-headphones"></i>
+                    <h6 class="text-white">Payment Secure</h6>
+                    <p>100% secure payment</p>
+                </div>
+                <div class="footer__social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="col-lg-8 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <i class="fa fa-money"></i>
+                            <h6 class="text-white">Money Back Guarantee</h6>
+                            <p>If good have Problems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer__copyright__text">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This project is made by Abhishek</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    
+    <script type="text/javascript">
+    var price_exchange = 1;
+    var _fetch_data = [
+	{
+		image: "https://images-na.ssl-images-amazon.com/images/I/61nz2WwfnbL._SL1500_.jpg",
+		product_name: "Dabur Sanitize Hand Sanitizer | Alcohol Based Sanitizer (Regular) - 500 ml",
+        price : 208.00
+	},
+	{
+		image: "https://images-na.ssl-images-amazon.com/images/I/61KhcBJFnIL._SX679_.jpg",
+		product_name: "Dettol Original Germ Protection Handwash Liquid Soap Refill, 1500ml",
+        price : 199.00
+
+	},
+	{
+		image: "https://images-na.ssl-images-amazon.com/images/I/41AMDioiIcL._SX466_.jpg",
+		product_name: "3-Ply Meltblown Disposable Surgical face Mask with filter (Pack of 100)",
+        price : 699.00
+	},
+	{
+		image: "https://images-na.ssl-images-amazon.com/images/I/71r91xs5tNL._SL1200_.jpg",
+		product_name: "Savlon Surface Disinfectant Spray Sanitizer, Germ Protection, 170g (230ml)(Pack of 2)",
+        price : 369.00 
+	},
+	{
+		image: "https://images-na.ssl-images-amazon.com/images/I/71es8Fc%2BXyL._SL1500_.jpg",
+		product_name: "Complan Nutrition and Health Drink Royale Chocolate, 1kg (Carton)",
+        price : 630.00
+	},
+	{
+		image: "https://images-na.ssl-images-amazon.com/images/I/71oPudCSyBL._SL1500_.jpg",
+		product_name: "Dabur Chyawanprash - 2 X Immunity - 500 gm (Get 50 gm Free )",
+        price : 163.00
+	}
+];
+    function displayList(curr){
+        var html_data = "";
+        $('#product_listing').html('');
+        $.each( _fetch_data, function( key, data ) {
+        var total_price = price_exchange*data.price;
+        html_data = `<div class="col-lg-4 col-md-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="`+data.image+`" style="background-image: url(`+data.image+`);">
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">`+data.product_name+`</a></h6>
+                                    <div class="product__price">`+curr+` `+total_price.toFixed(2)+`</div>
+                                </div>
+                                <div style="text-align:center;margin: 10px 0 10px 0;">
+                                    <a class="add-to-cart btn btn-primary text-white" href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>`;
+                        $('#product_listing').append(html_data);      
+        });
+
+    }
+    displayList('₹');  
+        function changePrice(id){
+            if(id == "INR"){
+                price_exchange = 1;
+                displayList('₹');
+            }else{
+                $.ajax({url: "https://api.exchangeratesapi.io/latest?base=INR", success: function(result){
+                    price_exchange = result.rates.USD;
+                    displayList('$');
+                }});
+                
+            }
+        }
+    </script>
+</body>
+
+</html>
